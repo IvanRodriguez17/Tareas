@@ -1,10 +1,15 @@
 def palindromo(n):
-    if n < 10:
+    if invertir(n) == n :
         return True
-    if n%10 == n//10:
-        return True
+    else :
+        return False
+    
+
+def invertir(n):
+    if longNum(n) == 1:
+        return n
     else:
-        return True == palindromo(n//10) 
+        return (n % 10) * 10 ** (longNum(n) - 1) + invertir(n // 10)
 
 def longNum(n):
     if(n == 0):
@@ -13,3 +18,5 @@ def longNum(n):
         return 1;
     else:
         return 1 + longNum(n//10)
+    
+    
